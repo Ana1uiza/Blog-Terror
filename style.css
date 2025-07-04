@@ -1,0 +1,200 @@
+/* FUNDO */
+body {
+    display: flex; /* Define o layout  */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza tudo horizontalmente */
+    justify-content: flex-start; /* Alinha os itens ao topo */
+    background-image: url(./imagens/giphy.gif); /* Imagem de fundo animada */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-attachment: fixed; /* Faz o fundo ficar fixo ao rolar */
+    background-position: center; /* Centraliza a imagem de fundo */
+}
+
+/* MENU */
+.menu {
+    background-color: rgb(24, 23, 23); /* Cor de fundo escura */
+    display: flex; /* Flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaço entre os links */
+    padding: 40px 30px; /* Espaçamento interno */
+    width: 95%; /* Largura relativa à tela */
+    max-width: 1100px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o menu */
+    position: fixed; /* Fixa no topo da tela */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* Garante que fique acima de tudo */
+    border-bottom: 2px solid #444; /* Linha separando o menu do resto */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+.menu a {
+    text-decoration: none; /* Remove sublinhado */
+    color: beige; /* Cor do texto */
+    text-shadow: 2px 2px 5px rgb(237, 6, 6);
+    font-weight: bold; /* Deixa em negrito */
+    letter-spacing: 5px; /* Espaçamento entre letras */
+    padding: 10px 15px; /* Espaçamento interno */
+    font-size: 22px; /* Tamanho da fonte */
+}
+
+.menu a:hover {
+    color: rgb(249, 0, 0);/* muda a cor ao passar o mouse*/
+}
+
+/* TÍTULOS */
+h1 {
+    font-size: 4.2em; /* Tamanho da letra*/
+    color: rgb(95, 2, 2); /* muda a cor da letra */
+    text-shadow: 2px 2px 5px brown; /* Sombra pra dar profundidade */
+    margin-top: 60px; /* Distância do topo */
+}
+
+h2 {
+    color: rgb(143, 5, 5);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin-top: 20px;
+}
+
+h3 {
+    color: rgb(245, 245, 245);
+    text-shadow: 2px 2px 5px rgb(224, 6, 6);
+    margin-top: 20px;
+}
+
+/* CAPA DO SITE */
+.capa {
+    background: #161212eb;
+    border-radius: 10px;/* bordas redondas*/
+    display: block;/* Garante que se comporte como bloco */
+    width: 95%;
+    max-width: 1100px;
+    box-sizing: border-box;
+    margin-top: 80%;
+}
+
+/* BLOCO PRINCIPAL */
+.retangulo {
+    width: 95%;
+    max-width: 1100px;
+    background: #161212eb; /* Fundo escuro com transparência */
+    color: #eae1e1; /* Texto claro */
+    font-size: 24px;
+    line-height: 1.5; /* Altura entre linhas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Conteúdo um embaixo do outro */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px auto 0 auto; /* Espaço entre o menu e o retângulo */
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* IMAGENS DENTRO DO RETÂNGULO */
+.retangulo img {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 700px; /* Limita o tamanho */
+    border-radius: 10px;
+    margin: 20px auto; /* Espaçamento e centralização */  
+}
+/*TEXTO */
+p {
+    margin: 5vmin; /* Margem proporcional ao tamanho da tela */
+    line-height: 2; /* Espaço entre linhas */
+    text-indent: 30px; /* Recuo da primeira linha */
+    text-align: justify; /* Justifica o texto */
+}
+/*LINHA DE SEPARAÇÃO */
+hr {
+    width: 100%;
+    margin: 40px auto;
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+/* RODAPÉ */
+.rodape {
+    background-color: rgb(24, 23, 23);
+    color: rgb(135, 214, 221);
+    font-size: 25px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Largura total da tela */
+    margin-top: 0;
+    box-sizing: border-box;
+    border-top: 2px solid; /* Linha separando do conteúdo */
+}
+
+
+/*RESPONSIVIDADE PARA TELAS MENORES*/
+@media (max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-image: none;/* Remove o fundo no celular */
+    }
+    .retangulo{
+        width: 100%;
+        padding: 30px 30px 0 30px;
+        font-size: 18px;
+        margin: 20px auto 0 auto;
+        background-color: black;
+    }
+    .menu {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px 5px;
+        width: 100%;
+    }
+    .menu a {
+        letter-spacing: 1px;
+        padding: 5px;
+        font-size: 14px;
+    }
+    .retangulo img{
+        max-width:100%;
+        margin: 10px auto;
+    }
+    section{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    h1{
+        margin: 10px 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 1.8em;
+    }
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+    hr{
+        margin-bottom: 0;
+        padding-bottom: 0;
+        width: 90%;
+    }
+    .capa, img{
+        width: 100%;
+        height: auto;
+    
+    }
+    .rodape{
+        margin-top: 0;
+        padding: 20px;
+        font-size: 10px;
+    }
+}
+
